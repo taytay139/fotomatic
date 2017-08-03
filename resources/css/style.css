@@ -1,5 +1,4 @@
 /* Universal Styles */
-
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -26,6 +25,7 @@ html {
 
 .image-container img {
   display: block;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -34,13 +34,14 @@ html {
   }
 }
 
-/* Header */
 
+/* Header */
 header {
   position: fixed;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 100;
 }
 
 header .content {
@@ -110,16 +111,23 @@ header .mobile {
   }
 }
 
-/* Sign Up Section */
 
+/* Sign Up Section */
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
+  position: relative;
+  top: 171px;
+  left: 10%;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
@@ -207,8 +215,8 @@ header .mobile {
   }
 }
 
-/* Features Section */
 
+/* Features Section */
 #features-section {
   display: flex;
   justify-content: space-between;
@@ -227,6 +235,10 @@ header .mobile {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+}
+
+.feature .content {
+  padding: 2.5rem 0;
 }
 
 .feature h2 {
@@ -268,8 +280,8 @@ header .mobile {
   }
 }
 
-/* Filters Section */
 
+/* Filters Section */
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
@@ -294,6 +306,7 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -328,17 +341,17 @@ header .mobile {
   }
 }
 
-/* Quotes Section */
 
+/* Quotes Section */
 #quotes-section {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -368,8 +381,8 @@ header .mobile {
   }
 }
 
-/* Footer */
 
+/* Footer */
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
